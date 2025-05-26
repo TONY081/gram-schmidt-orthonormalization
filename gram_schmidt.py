@@ -1,18 +1,9 @@
 
-# coding: utf-8
+
 
 # # Gram-Schmidt process
-# 
-# ## Instructions
-# In this assignment you will write a function to perform the Gram-Schmidt procedure, which takes a list of vectors and forms an orthonormal basis from this set.
-# As a corollary, the procedure allows us to determine the dimension of the space spanned by the basis vectors, which is equal to or less than the space which the vectors sit.
-# 
-# You'll start by completing a function for 4 basis vectors, before generalising to when an arbitrary number of vectors are given.
-# 
-# Again, a framework for the function has already been written.
-# Look through the code, and you'll be instructed where to make changes.
-# We'll do the first two rows, and you can use this as a guide to do the last two.
-# 
+
+
 # ### Matrices in Python
 # Remember the structure for matrices in *numpy* is,
 # ```python
@@ -30,14 +21,12 @@
 # A[n]
 # ```
 # 
-# Building on last assignment, in this exercise you will need to select whole columns at a time.
-# This can be done with,
-# ```python
+
 # A[:, m]
 # ```
 # which will select the m'th column (starting at zero).
 # 
-# In this exercise, you will need to take the dot product between vectors. This can be done using the @ operator.
+
 # To dot product vectors u and v, use the code,
 # ```python
 # u @ v
@@ -45,18 +34,9 @@
 # 
 # All the code you should complete will be at the same level of indentation as the instruction comment.
 # 
-# ### How to submit
-# Edit the code in the cell below to complete the assignment.
-# Once you are finished and happy with it, press the *Submit Assignment* button at the top of this notebook.
-# 
-# Please don't change any of the function names, as these will be checked by the grading script.
-# 
-# If you have further questions about submissions or programming assignments, here is a [list](https://www.coursera.org/learn/linear-algebra-machine-learning/discussions/weeks/1/threads/jB4klkn5EeibtBIQyzFmQg) of Q&A. You can also raise an issue on the discussion forum. Good luck!
-
-# In[1]:
 
 
-# GRADED FUNCTION
+
 import numpy as np
 import numpy.linalg as la
 
@@ -121,14 +101,9 @@ def dimensions(A) :
     return np.sum(la.norm(gsBasis(A), axis=0))
 
 
-# ## Test your code before submission
-# To test the code you've written above, run the cell (select the cell above, then press the play button [ ▶| ] or press shift-enter).
-# You can then use the code below to test out your function.
-# You don't need to submit this cell; you can edit and run it as much as you like.
-# 
-# Try out your code on tricky test cases!
+# ## Test your code 
 
-# In[2]:
+
 
 
 A = np.array([[1,0,2,6],
@@ -138,7 +113,6 @@ A = np.array([[1,0,2,6],
 gsBasis4(A)
 
 
-# In[3]:
 
 
 # Once you've done Gram-Schmidt once,
